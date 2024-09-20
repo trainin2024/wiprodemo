@@ -1,0 +1,113 @@
+
+ashujauhari@Ashus-MacBook-Air ~ % echo $PATH
+/Users/AshuJauhari/Applications/mongodb-macos-x86_64-6.0.3/bin:/Library/Frameworks/Python.framework/Versions/3.11/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Kafka/kafka_2.13-3.1.0/bin:/Applications/Postgres.app/Contents/Versions/latest/bin
+
+ashujauhari@Ashus-MacBook-Air ~ % psql
+psql (15.1)
+Type "help" for help.
+
+ashujauhari=# psql postgres://ashujauhari@localhost:5432/ashujauhari
+
+
+ashujauhari-# \conninfo
+You are connected to database "ashujauhari" as user "ashujauhari" via socket in "/tmp" at port "5432".
+
+ashujauhari-# \q
+
+ashujauhari@Ashus-MacBook-Air ~ % psql postgres://ashujauhari@localhost:5432/ashujauhari     
+psql (15.1)
+Type "help" for help.
+
+                    ^
+ashujauhari=# create table product (id serial primary key,name text, qty numeric(4),   price NUMERIC (5));
+CREATE TABLE
+
+ashujauhari=# insert into product values(100, 'Phone',2,1000);
+INSERT 0 1
+ashujauhari=# select * from product;
+ id  | name  | qty | price 
+-----+-------+-----+-------
+ 100 | Phone |   2 |  1000
+(1 row)
+
+
+ashujauhari=# insert into product values(200, 'Mobile',1,5000);
+INSERT 0 1
+
+ashujauhari=# select * from product;
+ id  |  name  | qty | price 
+-----+--------+-----+-------
+ 100 | Phone  |   2 |  1000
+ 200 | Mobile |   1 |  5000
+(2 rows)
+
+ashujauhari-# \l
+                                                    List of databases
+    Name     |    Owner    | Encoding |   Collate   |    Ctype    | ICU Locale | Locale Provider |   Access privileges   
+-------------+-------------+----------+-------------+-------------+------------+-----------------+-----------------------
+ ashujauhari | ashujauhari | UTF8     | en_US.UTF-8 | en_US.UTF-8 | en-US      | icu             | 
+ postgres    | postgres    | UTF8     | en_US.UTF-8 | en_US.UTF-8 | en-US      | icu             | 
+ template0   | postgres    | UTF8     | en_US.UTF-8 | en_US.UTF-8 | en-US      | icu             | =c/postgres          +
+             |             |          |             |             |            |                 | postgres=CTc/postgres
+ template1   | postgres    | UTF8     | en_US.UTF-8 | en_US.UTF-8 | en-US      | icu             | =c/postgres          +
+             |             |          |             |             |            |                 | postgres=CTc/postgres
+(4 rows)
+
+
+ashujauhari-#  SELECT tablename
+				FROM pg_catalog.pg_tables
+				WHERE schemaname = 'public';
+
+ashujauhari-# \dt
+				
+ashujauhari-# drop table customer
+
+ashujauhari-# select * from customer
+
+
+             
+ashujauhari=# create table customer (id serial primary key,name text)
+ashujauhari-# insert into customer(100,'Alex')
+ashujauhari-# select * from Alex
+ashujauhari-# select * from customer
+ashujauhari-# insert into customer values(100,'Alex')
+
+                                                                                                                                                                             
+ashujauhari-# insert into customer values(100,'Alex') 
+ashujauhari-# commit
+ashujauhari=# 
+ashujauhari=# \dt
+            List of relations
+ Schema |   Name   | Type  |    Owner    
+--------+----------+-------+-------------
+ public | customer | table | ashujauhari
+ public | product  | table | ashujauhari
+(2 rows)
+
+               ^
+                    ^
+ashujauhari=# insert into customer (id, name) values (100,'Alex');
+INSERT 0 1
+
+ashujauhari=# insert into customer (id, name) values (200,'Alisa');
+INSERT 0 1
+
+ashujauhari=# select * from product;
+ id  |  name  | qty | price 
+-----+--------+-----+-------
+ 100 | Phone  |   2 |  1000
+ 200 | Mobile |   1 |  5000
+(2 rows)
+
+ashujauhari=# select * from customer;
+ id  | name  | qty | price 
+-----+-------+-----+-------
+ 100 | Alex  |     |      
+ 200 | Alisa |     |      
+(2 rows)
+
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username TEXT UNIQUE NOT NULL,
+    password TEXT NOT NULL
+);
