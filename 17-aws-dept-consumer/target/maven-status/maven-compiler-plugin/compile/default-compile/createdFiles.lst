@@ -1,0 +1,4 @@
+com/cts/DepartmentController.class
+com/cts/AwsDeptFeignApplication.class
+com/cts/Department.class
+com/cts/DepartmentFeignClient.class
