@@ -17,8 +17,7 @@
 <img width="148" alt="image" src="https://github.com/user-attachments/assets/59179ae4-ed5e-46db-a379-6341f8bcd5bf">
 
 ### c. Test the order -service 
-<img width="441" alt="image" src="https://github.com/user-attachments/assets/e9d246af-70b0-4e7d-904b-01f8d5215767">
-
+<img width="468" alt="image" src="https://github.com/user-attachments/assets/3ac625f8-9bac-4460-b46d-0ca8a99775ed">
 
 ## 4. Run the Customer service http://localhost:9000/customers/myorders/1 
 ### a. Check the table name in workbench as customer1 as enity class
