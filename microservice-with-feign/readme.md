@@ -14,8 +14,6 @@
 
 <img width="213" alt="image" src="https://github.com/user-attachments/assets/03046eed-beec-4be3-a87d-eb4ee9dc6eb4">
 
-<img width="717" alt="image" src="https://github.com/user-attachments/assets/750d75c3-0c47-468b-bc5d-639bd9035064">
-
 <img width="148" alt="image" src="https://github.com/user-attachments/assets/59179ae4-ed5e-46db-a379-6341f8bcd5bf">
 
 ### c. Test the order -service 
