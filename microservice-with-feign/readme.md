@@ -14,7 +14,7 @@
 
 <img width="213" alt="image" src="https://github.com/user-attachments/assets/03046eed-beec-4be3-a87d-eb4ee9dc6eb4">
 
-<img width="148" alt="image" src="https://github.com/user-attachments/assets/59179ae4-ed5e-46db-a379-6341f8bcd5bf">
+
 
 ### c. Test the order -service 
 <img width="468" alt="image" src="https://github.com/user-attachments/assets/3ac625f8-9bac-4460-b46d-0ca8a99775ed">
@@ -22,7 +22,7 @@
 ## 4. Run the Customer service http://localhost:9000/customers/myorders/1 
 ### a. Check the table name in workbench as customer1 as enity class
 ### b. Insert a record  at least one record
-
+<img width="148" alt="image" src="https://github.com/user-attachments/assets/59179ae4-ed5e-46db-a379-6341f8bcd5bf">
 
 ### c. Test the endpoint http://localhost:9000/customers/myorders/1 
 <img width="566" alt="image" src="https://github.com/user-attachments/assets/c65c8e46-4a9c-4388-998c-080e746836c8">
